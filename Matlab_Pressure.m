@@ -1,5 +1,5 @@
 %%Évaluation des pressions issues de la nappe de pression de l'entreprise LimGroup
-%Exercice 1 : importation du fichier et partitionnement de la selle
+%Importation du fichier et partitionnement de la selle
 clear;
 clc;
 clf; 
@@ -35,7 +35,7 @@ while j<=224
     Gauche = [Gauche,SelleA];
 end
 
-%%Exercice 2 : Pmoyennes et Pmax à l'image 2200 pusi à toutes les images
+%%Pmoyennes et Pmax à l'image 2200 pusi à toutes les images
 
 Selle2200 = Selle(2200,:);                              
 Droite2200 = Droite(2200,:);                              
@@ -72,7 +72,7 @@ Pmax_milieu = max(max(Milieu));
 Pmax_gauche = max(max(Gauche));
 Pmax_droite = max(max(Droite));
 
-%%Exercice 2 : calcul des COP à toutes les images (y compris 2200)
+%%Calcul des COP à toutes les images (y compris 2200)
     
     % Partie Droite
 
@@ -350,7 +350,7 @@ MatCOPxglob = MatCOPxglob';
 COPxSelle = mean(MatCOPxglob);
 COPySelle = mean(MatCOPyglob);
 
-%%Exercice 2 : Graph3D des pressions à l'image 2200
+%%Graph3D des pressions à l'image 2200
 
 clf;   
 SE = reshape(Selle(2200,:),14,[]);
@@ -360,7 +360,7 @@ colorbar north
 colormap hot                                                                
 title("Graph présentant la pression sur la selle à l'image 2200")
 
-%%Exercice 2 : calcul des aires à l'image 2200
+%%Calcul des aires à l'image 2200
 
 % Selle entière
 
@@ -398,7 +398,7 @@ Moy5G = 0.05*Pmoy2200_gauche;
 VG = find(Gauche2200>Moy5G);
 AireG = length(VG)
 
-%%Exercice 2 : corrélations croisées
+%%Corrélations croisées
 
 CorrCroisX = xcorr(MatCOPxglobD,MatCOPxglobG);
 plot(CorrCroisX)
