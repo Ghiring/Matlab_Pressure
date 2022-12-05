@@ -402,5 +402,7 @@ AireG = length(VG)
 
 CorrCroisX = xcorr(MatCOPxglobD,MatCOPxglobG);
 plot(CorrCroisX)
+    title("CorrPlot en X")
 CorrCroisY = xcorr(MatCOPyglobD,MatCOPyglobG);
 plot(CorrCroisY)
+    title("CorrPlot en Y")
